@@ -83,19 +83,19 @@
 			children = (
 				33BB79001CA8A04B007E9A31 /* Main.storyboard */,
 				33A5C26E1CA84D5F00CEB4CB /* AppDelegate.swift */,
+				330276911CB1F83600A60D4F /* LoginViewController.swift */,
 				33A5C2701CA84D5F00CEB4CB /* VisitIndexViewController.swift */,
 				33A5C2721CA84D5F00CEB4CB /* SecondViewController.swift */,
+				33A5C2841CA870BF00CEB4CB /* InterestSurveyViewController.swift */,
 				3340FAE21CC3D41E007A98E1 /* RecommendationsViewController.swift */,
 				33A5C2771CA84D5F00CEB4CB /* Assets.xcassets */,
 				33A5C2791CA84D5F00CEB4CB /* LaunchScreen.storyboard */,
 				33A5C27C1CA84D5F00CEB4CB /* Info.plist */,
 				33A5C2821CA84FFE00CEB4CB /* VisitItem.swift */,
-				33A5C2841CA870BF00CEB4CB /* InterestSurveyViewController.swift */,
 				33A5C2861CA8714700CEB4CB /* InterestItem.swift */,
 				33A5C2881CA8746A00CEB4CB /* InterestList.swift */,
 				3328C0331CB1CC36005C5DB1 /* Bridging-Header.h */,
 				3302768F1CB1F1E200A60D4F /* User.swift */,
-				330276911CB1F83600A60D4F /* LoginViewController.swift */,
 				3340FAE41CC3D4EF007A98E1 /* RecommendationItem.swift */,
 			);
 			path = Paths2;

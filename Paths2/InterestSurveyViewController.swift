@@ -141,7 +141,7 @@ class InterestSurveyViewController: UITableViewController{
                 var indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 var indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row1item = InterestItem()
                 row1item.text = "Running Trails"
@@ -150,7 +150,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row2item = InterestItem()
                 row2item.text = "Biking"
@@ -159,7 +159,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row3item = InterestItem()
                 row3item.text = "Beaches"
@@ -168,7 +168,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row4item = InterestItem()
                 row4item.text = "National Parks"
@@ -177,7 +177,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
             
             case "Nightlife":
                 let row0item = InterestItem()
@@ -187,7 +187,7 @@ class InterestSurveyViewController: UITableViewController{
                 var indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 var indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row1item = InterestItem()
                 row1item.text = "Clubs"
@@ -196,7 +196,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row2item = InterestItem()
                 row2item.text = "Brewery"
@@ -205,7 +205,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row3item = InterestItem()
                 row3item.text = "Wine Bar"
@@ -214,7 +214,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row4item = InterestItem()
                 row4item.text = "Sports Bars"
@@ -223,7 +223,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
             case "Food":
                 let row0item = InterestItem()
                 row0item.text = "Cooking"
@@ -232,7 +232,7 @@ class InterestSurveyViewController: UITableViewController{
                 var indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 var indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row1item = InterestItem()
                 row1item.text = "Farmers Markets"
@@ -241,7 +241,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
             case "Arts & Entertainment":
                 let row0item = InterestItem()
                 row0item.text = "Movies"
@@ -250,7 +250,7 @@ class InterestSurveyViewController: UITableViewController{
                 var indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 var indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row1item = InterestItem()
                 row1item.text = "Arts & Crafts"
@@ -259,7 +259,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row2item = InterestItem()
                 row2item.text = "Theatre"
@@ -268,7 +268,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row3item = InterestItem()
                 row3item.text = "DIY"
@@ -277,7 +277,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row4item = InterestItem()
                 row4item.text = "Festivals"
@@ -286,7 +286,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
             
                 
                 let row5item = InterestItem()
@@ -296,7 +296,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
                 
                 let row6item = InterestItem()
                 row6item.text = "Comedy"
@@ -305,7 +305,7 @@ class InterestSurveyViewController: UITableViewController{
                 indexPath = NSIndexPath(forRow: numInterests, inSection: 0)
                 indexPaths = [indexPath]
                 tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-                numInterests++
+                numInterests += 1
             default:
                 return
         }

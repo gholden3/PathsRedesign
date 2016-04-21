@@ -150,7 +150,7 @@ class RecommencationViewController: UITableViewController, CLLocationManagerDele
         
         if  anyObj is Array<AnyObject> {
             
-            var r:RecommendationItem = RecommendationItem()
+            let r:RecommendationItem = RecommendationItem()
             
             for json in anyObj as! Array<AnyObject>{
                 r.url = (json["url"] as AnyObject? as? String) ?? "" // to get rid of null
