@@ -29,12 +29,6 @@ class RecommencationViewController: UITableViewController, CLLocationManagerDele
     
     required init?(coder aDecoder: NSCoder) {
         recs = [RecommendationItem]()
-
-        let row0item = RecommendationItem()
-        row0item.coordinates = "coordinates here"
-        row0item.rating = "1"
-        recs.append(row0item)
-    
        
         super.init(coder: aDecoder)
         
@@ -69,7 +63,7 @@ class RecommencationViewController: UITableViewController, CLLocationManagerDele
     
     func configureTextForCell(cell: UITableViewCell, withRecItem rec: RecommendationItem) {
         let label = cell.viewWithTag(1008) as! UILabel
-        label.text = " rec. place: "  + "\(rec.coordinates)" + " rating: " + "\(rec.rating)"
+        label.text = "\(rec.name)" + " rating: " + "\(rec.rating)"
     }
     
     
@@ -108,56 +102,35 @@ class RecommencationViewController: UITableViewController, CLLocationManagerDele
             if let dataString = NSString(data: dataD!, encoding: NSUTF8StringEncoding){
                 self.dataStringToPaste = dataString as String
                // print("string: \(dataString)")
-                var error: NSError
+                var _: NSError
                 do {
                     self.anyObj = try NSJSONSerialization.JSONObjectWithData(dataD!, options: [])
                 } catch {
                     print("Fetch failed: \((error as NSError).localizedDescription)")
                 }
-           //     var names: [String] = []
-          //      var contacts: [String] = []
                 if let json = self.anyObj as? Array<AnyObject> {
                     
                     print(json)
                     for index in 0...json.count-1 {
-                        
                         let rec : AnyObject? = json[index]
-                    //    print("printing rec!")
-                   //     print(rec)
                         let collection = rec! as! Dictionary<String, AnyObject>
-                     //   print(collection)
                         print("printing coords and rating")
-                        print(collection["placeID"])
-                         print(collection["rating"])
-                        
-                        var newitem = RecommendationItem()
-                        newitem.coordinates = collection["placeID"] as! String
-                        newitem.rating = collection["rating"] as! String
+                        print(collection["url"])
+                        print(collection["name"])
+                        print(collection["rating"])
+                        let newitem = RecommendationItem()
+                         newitem.url = collection["url"] as! String
+                        newitem.name = collection["name"] as! String
+                        let rating = collection["rating"] as! String
+                        var rating2 = (rating as NSString).floatValue
+                        print("float value: " + "\(rating2)")
+                        rating2 = (round(1000*rating2)/1000)
+                        newitem.rating = "\(rating2)"
                         self.recs.append(newitem)
-                            self.tableView.reloadData()
+                        self.tableView.reloadData()
                     
                     }
                 }
-                
-                
-                
-                
-               // var list:Array<RecommendationItem> = []
-               // list = self.parseJson(self.anyObj!)
-               // self.recs = list
-            //    self.tableView.reloadData()
-                
-             /*   var rec2 = list[2]
-               var ratingS = rec2.rating
-                var placeIDS = rec2.coordinates
-                 print("rating[2] \(ratingS)")
-                print("placeIDS[2] \(placeIDS)")
-                
-               var  rec3 = list[3]
-                 ratingS = rec3.rating
-                 placeIDS = rec3.coordinates
-                print("rating[3] \(ratingS)")
-                print("placeIDS[3] \(placeIDS)") */
             }
             else {
                 print("no data string")
@@ -169,6 +142,7 @@ class RecommencationViewController: UITableViewController, CLLocationManagerDele
     }
     
 
+
     
     func parseJson(anyObj:AnyObject) -> Array<RecommendationItem>{
         
@@ -179,7 +153,8 @@ class RecommencationViewController: UITableViewController, CLLocationManagerDele
             var r:RecommendationItem = RecommendationItem()
             
             for json in anyObj as! Array<AnyObject>{
-                r.coordinates = (json["placeID"] as AnyObject? as? String) ?? "" // to get rid of null
+                r.url = (json["url"] as AnyObject? as? String) ?? "" // to get rid of null
+                r.name = (json["name"] as AnyObject? as? String) ?? "" // to get rid of null
                 r.rating =  (json["rating"]  as AnyObject? as? String) ?? ""
                 list.append(r)
             }// for

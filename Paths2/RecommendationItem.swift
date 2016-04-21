@@ -10,6 +10,8 @@
 import Foundation
 
 class RecommendationItem {
+    var url = ""
+    var name = ""
     var coordinates = ""
     var rating = ""
 }
